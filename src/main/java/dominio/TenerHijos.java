@@ -1,7 +1,7 @@
 package dominio;
 
 public class TenerHijos extends Dream {
-    TenerHijos(){
-
+    TenerHijos(Persona personaQueQuiereUnHijo){
+        personaQueQuiereUnHijo.TenerUnHijo();
     }
 }

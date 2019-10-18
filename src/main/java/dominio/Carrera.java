@@ -1,8 +1,8 @@
 package dominio;
 
-public class Lugar {
+public class Carrera {
     String nombre;
-    Lugar(String nombre){
+    Carrera(String nombre){
         this.nombre = nombre;
     }
 

@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
-    protected int Edad;
+    protected String nombre;
+    protected int edad;
     /*
     1. Recibirse de una carrera: por ejemplo, de “Ingeniero en Sistemas de
     Información”, “Odontólogo” o “Licenciado en Psicología”.
@@ -17,17 +18,48 @@ public class Persona {
     protected int hijosQueQuieroTener;
     protected int hijosQueQuieroAdoptar;
     protected List<Lugar> lugaresQueQuieroVisitar;
-    protected double sueldoQueQuieroTener;
+    protected List<Lugar> lugaresVisitados;
+    protected List<Carrera> carrerasDeLasQueMeQuieroRecibir;
+    protected List<Carrera> carrerasDeLasQueMeRecibi;
+    protected double sueldo;
     protected int cantidadHijos;
 
-    Persona(int edad){
-        this.Edad = edad;
+    Persona(String nombre, int edad){
+        this.nombre = nombre;
+        this.edad = edad;
         this.cantidadHijos = 0;
         this.lugaresQueQuieroVisitar = new ArrayList<>();
+        this.lugaresVisitados = new ArrayList<>();
+        this.carrerasDeLasQueMeQuieroRecibir = new ArrayList<>();
+        this.carrerasDeLasQueMeRecibi = new ArrayList<>();
     }
 
     public void agregarLugarAVisitar(Lugar unLugar){
         this.lugaresQueQuieroVisitar.add(unLugar);
+    }
+    public void agregarLugarVisitado(Lugar unLugar){
+        this.lugaresVisitados.add(unLugar);
+    }
+
+
+    public void agregarCarrera(Carrera unaCarrera){
+        this.carrerasDeLasQueMeQuieroRecibir.add(unaCarrera);
+    }
+    public void agregarCarreraTerminada(Carrera unaCarrera){
+        this.carrerasDeLasQueMeRecibi.add(unaCarrera);
+    }
+    public void TenerUnHijo(){
+        this.cantidadHijos++;
+        System.out.println(this.nombre + "ha tenido un nuevo hijo");
+    }
+    public void AdoptarUnHijo(){
+        this.cantidadHijos++;
+        System.out.println(this.nombre + "ha tenido un nuevo hijo");
+    }
+    public void MejorarMiSueldo(double sueldoQueQuiero){
+        this.cantidadHijos++;
+        System.out.println("A " + this.nombre + "le han aumentado su sueldo");
+        this.sueldo = sueldoQueQuiero;
     }
 
 }
