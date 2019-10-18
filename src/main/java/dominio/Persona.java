@@ -29,4 +29,5 @@ public class Persona {
     public void agregarLugarAVisitar(Lugar unLugar){
         this.lugaresQueQuieroVisitar.add(unLugar);
     }
+
 }
